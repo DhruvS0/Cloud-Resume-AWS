@@ -1,21 +1,39 @@
-name: Test AWS Credentials
+name: Copy website to S3 and invalidate CloudFront Distribution
 
 on:
   push:
     branches:
-    - main
-    
+      - main
+
 jobs:
-  test-aws:
+  copy-website-to-s3-and-invalidate-cloudfront:
     runs-on: ubuntu-latest
+    environment: AWS  # Use the AWS environment
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: List S3 Buckets
-        run: |
-          aws s3 ls
+      - name: Sync S3
+        uses: jakejarvis/s3-sync-action@master
+        with:
+          args: --follow-symlinks --delete --exclude '.git/*' --size-only
         env:
+          AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: 'us-east-1'
+          SOURCE_DIR: 'website'  # This points to the 'website' folder in your GitHub repo
+
+  invalidate-cloudfront-distribution:
+    needs: copy-website-to-s3-and-invalidate-cloudfront
+    runs-on: ubuntu-latest
+    environment: AWS  # Use the AWS environment
+    steps:
+      - name: Invalidate CloudFront
+        uses: chetan/invalidate-cloudfront-action@v2
+        env:
+          DISTRIBUTION: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
+          PATHS: "/*"
+          AWS_REGION: "us-east-1"
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
