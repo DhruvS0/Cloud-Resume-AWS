@@ -19,10 +19,7 @@ jobs:
         mv website/.* . || true
 
     - name: Debug: Check Environment Variables
-      run: |
-        echo "AWS_S3_BUCKET=${{ secrets.AWS_S3_BUCKET }}"
-        echo "AWS_REGION=us-east-1"
-        echo "SOURCE_DIR=."
+      run: echo "Debug step running"
 
     - name: Sync S3
       uses: jakejarvis/s3-sync-action@master
