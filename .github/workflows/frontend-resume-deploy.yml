@@ -18,8 +18,8 @@ jobs:
         mv website/* .
         mv website/.* . || true
 
-    - name: Debug: Check Environment Variables
-      run: env
+    - name: Debug Environment Variables
+      run: printenv
 
     - name: Sync S3
       uses: jakejarvis/s3-sync-action@master
