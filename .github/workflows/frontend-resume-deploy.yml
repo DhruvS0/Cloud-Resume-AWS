@@ -1,4 +1,4 @@
-name: Deploy Website to S3 and Invalidate CloudFront
+name: Deploy to S3 and CloudFront
 
 on:
   push:
@@ -8,36 +8,21 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Move files to root
-      run: |
-        mv website/* .
-        mv website/.* . || true
-
-    - name: Sync S3
-      uses: jakejarvis/s3-sync-action@master
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v1
       with:
-        args: --follow-symlinks --delete --exclude '.git/*' --size-only
-      env:
-        AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
-        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        AWS_REGION: 'us-east-1'
-        SOURCE_DIR: '.'
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: us-east-1
 
-  invalidate-cloudfront:
-    needs: deploy
-    runs-on: ubuntu-latest
-    steps:
-    - name: Invalidate CloudFront
-      uses: chetan/invalidate-cloudfront-action@v2
-      env:
-        DISTRIBUTION: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
-        PATHS: "/*"
-        AWS_REGION: "us-east-1"
-        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+    - name: Sync S3 bucket
+      run: |
+        aws s3 sync . s3://www.dhruvmshah.site --exclude '.git/*' --exclude 'node_modules/*' --delete
+
+    - name: Invalidate CloudFront cache
+      run: |
+        aws cloudfront create-invalidation --distribution-id YOUR_DISTRIBUTION_ID --paths "/*"
