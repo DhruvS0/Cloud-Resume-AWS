@@ -18,9 +18,6 @@ jobs:
         mv website/* .
         mv website/.* . || true
 
-    - name: Debug: Check Environment Variables
-      run: echo "Debug step running"
-
     - name: Sync S3
       uses: jakejarvis/s3-sync-action@master
       with:
