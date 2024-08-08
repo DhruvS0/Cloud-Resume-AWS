@@ -173,18 +173,25 @@
         <p>&copy; 2024 Dhruv Mehul Shah. All rights reserved.</p>
     </footer>
     <script>
+        // Replace this with your actual API Gateway URL output from Terraform
+        const apiUrl = 'https://985azra0hb.execute-api.us-east-1.amazonaws.com/default/visitorcount';
+    
         async function fetchVisitorCount() {
             try {
-                const response = await fetch('https://nw53edzfq2.execute-api.us-east-1.amazonaws.com/prod-v1');
-                const count = await response.json();
-                document.getElementById('count').innerText = count;
+                const response = await fetch(apiUrl);
+                if (response.ok) {
+                    const data = await response.json();
+                    document.getElementById('count').innerText = data.visitor_count;
+                } else {
+                    console.error('Failed to fetch visitor count:', response.statusText);
+                }
             } catch (error) {
-                console.error('Error fetching visitor count:', error);
+                console.error('Error:', error);
             }
         }
     
         // Fetch the visitor count when the page loads
         window.onload = fetchVisitorCount;
-    </script>
+    </script>    
 </body>
 </html>

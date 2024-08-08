@@ -11,7 +11,6 @@ terraform {
 
 provider "aws" {
   region  = "us-east-1"  # Update if needed
-  profile = "aws-resume" # Replace with your AWS CLI profile name
 }
 
 # DynamoDB Table
