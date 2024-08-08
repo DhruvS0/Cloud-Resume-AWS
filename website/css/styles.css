@@ -306,3 +306,6 @@ footer p {
     background: none; /* Remove background */
 }
 
+#visitor-counter {
+    margin-top: 20px; /* Adjust the value as needed */
+}
