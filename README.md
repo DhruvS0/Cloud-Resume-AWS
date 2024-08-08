@@ -5,7 +5,7 @@
  This project demonstrates the deployment of a cloud-based resume website using various AWS services and automation tools. The architecture ensures scalability, security, and reliability while automating infrastructure deployment using Terraform.
 
 ### Architecture
-![alt text](media/cloudresume-ds.drawio.png)
+![alt text](media/cloudresume-ds.drawio1.png)
 
 ### Architecture Description
 The project architecture is divided into two main components: *Frontend* and *Backend*.
