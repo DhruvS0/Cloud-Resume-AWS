@@ -4,6 +4,11 @@
  ### Project Overview
  This project demonstrates the deployment of a cloud-based resume website using various AWS services and automation tools. The architecture ensures scalability, security, and reliability while automating infrastructure deployment using Terraform.
 
+ ### DEMO
+ Visit the below link to view my resume website hosted on S3.
+ 
+[www.dhruvmshah.site](www.dhruvmshah.site)
+
 ### Architecture
 ![alt text](media/cloudresume-ds.drawio1.png)
 
