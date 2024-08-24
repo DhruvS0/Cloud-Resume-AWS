@@ -2,12 +2,23 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    color: #333; /* Text color to dark gray */
-    background: linear-gradient(to bottom, #e0f7fa, #ffffff); /* Background gradient to light sky blue */
+    color: #333;
+    background: linear-gradient(to bottom, #e0f7fa, #ffffff);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.light-mode {
+    background: #ffffff;
+    color: #333;
+}
+
+body.dark-mode {
+    background: #333;
+    color: #ffffff;
 }
 
 header {
-    background: linear-gradient(90deg, #00acc1, #e0f7fa); /* Header background to a light sky blue gradient */
+    background: linear-gradient(90deg, #00acc1, #e0f7fa);
     color: #fff;
     padding: 2em 0;
     text-align: center;
@@ -27,7 +38,7 @@ header h1 {
 header p {
     font-size: 1.2em;
     margin: 0.5em 0 0;
-    color: #f0f8ff; /* Lighter text color */
+    color: #f0f8ff;
 }
 
 header .profile-photo {
@@ -57,7 +68,7 @@ nav ul li {
     color: #00acc1;
     text-decoration: none;
     padding: 0.5em 1em;
-    background-color: #fff; /* Button background color to white */
+    background-color: #fff;
     border-radius: 5px;
     transition: background-color 0.3s, color 0.3s, transform 0.3s;
     font-weight: bold;
@@ -65,12 +76,15 @@ nav ul li {
 }
 
 .nav-link:hover {
-    background-color: #00acc1; /* Button hover color to light blue */
+    background-color: #00acc1;
     color: #fff;
     transform: translateY(-3px);
 }
 
 main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2em;
     padding: 2em;
     max-width: 1200px;
     margin: 0 auto;
@@ -92,7 +106,7 @@ section:hover {
 
 h2 {
     text-align: center;
-    color: #00acc1; /* Light blue text color */
+    color: #00acc1;
     font-size: 2em;
     margin-bottom: 1em;
     position: relative;
@@ -103,12 +117,12 @@ h2::after {
     display: block;
     width: 60px;
     height: 4px;
-    background: #00acc1; /* Line color to light blue */
+    background: #00acc1;
     margin: 0.5em auto;
 }
 
 h3 {
-    color: #00acc1; /* Light blue text color */
+    color: #00acc1;
     font-size: 1.5em;
     margin-top: 1em;
 }
@@ -120,7 +134,7 @@ h3 {
 }
 
 .about-description p {
-    color: #333; /* Dark text color */
+    color: #333;
     text-align: justify;
     line-height: 1.6;
     font-size: 1.1em;
@@ -135,7 +149,7 @@ ul {
 }
 
 ul li {
-    background: #00acc1; /* List item background to light blue */
+    background: #00acc1;
     color: #fff;
     margin: 0.5em;
     padding: 0.5em 1em;
@@ -144,36 +158,36 @@ ul li {
 }
 
 ul li:hover {
-    background: #007c91; /* Hover background to darker blue */
+    background: #007c91;
     transform: translateY(-3px);
 }
 
 .project {
     margin: 1em 0;
     padding: 1em;
-    border-left: 5px solid #00acc1; /* Border color to light blue */
+    border-left: 5px solid #00acc1;
 }
 
 .project h3 {
     margin-top: 0;
-    color: #00acc1; /* Light blue text color */
+    color: #00acc1;
 }
 
 .project p {
     font-size: 1em;
     line-height: 1.5;
-    color: #333; /* Dark text color */
+    color: #333;
 }
 
 .project a {
     text-decoration: none;
-    color: #00acc1; /* Link color to light blue */
+    color: #00acc1;
     font-weight: bold;
     transition: color 0.3s;
 }
 
 .project a:hover {
-    color: #007c91; /* Hover color to darker blue */
+    color: #007c91;
 }
 
 .social-media {
@@ -188,7 +202,7 @@ ul li:hover {
     align-items: center;
     text-decoration: none;
     color: #fff;
-    background-color: #00acc1; /* Button background color to light blue */
+    background-color: #00acc1;
     padding: 0.5em 1em;
     border-radius: 5px;
     transition: background-color 0.3s, color 0.3s, transform 0.3s;
@@ -196,12 +210,12 @@ ul li:hover {
 }
 
 .social-link:hover {
-    background-color: #007c91; /* Button hover color to darker blue */
+    background-color: #007c91;
     transform: translateY(-3px);
 }
 
 footer {
-    background: #e0f7fa; /* Footer background to light sky blue */
+    background: #e0f7fa;
     color: #333;
     text-align: center;
     padding: 1em 0;
@@ -222,7 +236,7 @@ footer ul li {
 }
 
 footer ul li a {
-    color: #00acc1; /* Link color to light blue */
+    color: #00acc1;
     text-decoration: none;
     font-weight: bold;
 }
@@ -252,7 +266,7 @@ footer p {
 }
 
 #certifications h2 {
-    color: #00acc1; /* Light blue text color */
+    color: #00acc1;
     font-size: 2em;
     text-align: center;
     margin-bottom: 1em;
@@ -264,7 +278,7 @@ footer p {
     display: block;
     width: 60px;
     height: 4px;
-    background: #00acc1; /* Line color to light blue */
+    background: #00acc1;
     margin: 0.5em auto;
 }
 
@@ -274,20 +288,20 @@ footer p {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 1em; /* Add gap for spacing */
+    gap: 1em;
 }
 
 #certifications ul li {
     margin-bottom: 0.5em;
     font-size: 1.1em;
-    background: none; /* Remove background */
-    padding: 0; /* Remove padding */
+    background: none;
+    padding: 0;
 }
 
 .certification-logo {
-    width: 50px; /* Adjust size as needed */
+    width: 50px;
     height: auto;
-    margin-right: 10px; /* Adjust spacing between logo and text */
+    margin-right: 10px;
 }
 
 .certification-list {
@@ -295,17 +309,34 @@ footer p {
     padding: 0;
     display: flex;
     flex-wrap: wrap;
-    gap: 1em; /* Add gap for spacing */
+    gap: 1em;
 }
 
 .certification-badge {
-    width: 150px; /* Set width to ensure all badges are the same size */
-    height: 150px; /* Set height to ensure all badges are the same size */
-    margin: 10px; /* Adjust spacing around each badge */
-    border: none; /* Remove border */
-    background: none; /* Remove background */
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    border: none;
+    background: none;
 }
 
 #visitor-counter {
-    margin-top: 20px; /* Adjust the value as needed */
+    margin-top: 20px;
+}
+
+.toggle-button {
+    position: fixed;
+    top: 1em;
+    right: 1em;
+    background: #00acc1;
+    color: #fff;
+    border: none;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.toggle-button:hover {
+    background: #007c91;
 }
