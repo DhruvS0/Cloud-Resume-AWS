@@ -105,7 +105,7 @@ section.dark-mode {
     color: #e0f7fa;
 }
 
-section h2, section h3, section p, section a {
+section h2, section h3, section p, section a, section ul li {
     color: inherit;
 }
 
@@ -186,7 +186,7 @@ ul li:hover {
 .project p {
     font-size: 1em;
     line-height: 1.5;
-    color: #333;
+    color: inherit;
 }
 
 .project a {
