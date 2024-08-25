@@ -4,13 +4,13 @@ body {
     margin: 0;
     padding: 0;
     color: #333;
-    background: linear-gradient(to bottom, #e0f7fa, #ffffff);
+    background: #e0f7fa;
     transition: background-color 0.3s, color 0.3s;
 }
 
 body.dark-mode {
     color: #e0f7fa;
-    background: linear-gradient(to bottom, #333, #555);
+    background: #333;
 }
 
 a {
@@ -25,7 +25,7 @@ a:hover {
 
 /* Header */
 header {
-    background: linear-gradient(90deg, #00acc1, #e0f7fa);
+    background: #00acc1;
     color: #fff;
     padding: 2em 0;
     text-align: center;
@@ -36,7 +36,7 @@ header {
 }
 
 header.dark-mode {
-    background: linear-gradient(90deg, #005f73, #333);
+    background: #005f73;
 }
 
 header h1 {
@@ -106,7 +106,12 @@ section {
     padding: 2em;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s, color 0.3s;
+}
+
+section.dark-mode {
+    background: #444;
+    color: #e0f7fa;
 }
 
 section:hover {
