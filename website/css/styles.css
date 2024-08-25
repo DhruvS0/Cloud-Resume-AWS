@@ -39,17 +39,8 @@ header.dark-mode {
     background: #005f73;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2.5em;
-    letter-spacing: 2px;
+header h1, header p {
     color: #fff;
-}
-
-header p {
-    font-size: 1.2em;
-    margin: 0.5em 0 0;
-    color: #f0f8ff;
 }
 
 header .profile-photo {
@@ -112,6 +103,10 @@ section {
 section.dark-mode {
     background: #444;
     color: #e0f7fa;
+}
+
+section h2, section h3, section p, section a {
+    color: inherit;
 }
 
 section:hover {
