@@ -1,176 +1,377 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of a Cloud and Network Engineer showcasing skills and projects">
-    <meta name="keywords" content="Cloud Engineer, Network Engineer, AWS, Azure, Cisco, Linux, Portfolio">
-    <title>Dhruv Mehul Shah - Cloud and Network Engineer</title>
+    <title>Dhruv Shah - Network & Cloud Engineer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <meta name="description" content="Dhruv Shah - Network and Cloud Engineer specializing in AWS, Azure, and DevOps practices">
+    <meta name="keywords" content="Network Engineer, Cloud Infrastructure, DevOps, AWS, Azure">
+    <meta property="og:title" content="Dhruv Shah - Network and Cloud Engineer">
+    <meta property="og:description" content="Passionate about emerging technologies and optimizing complex systems">
+    <meta property="og:image" content="">
+
+    <!-- Add the favicon link -->
+    
+
 </head>
 <body>
-    <header>
-        <h1>Dhruv Mehul Shah</h1>
-        <p>Aspiring Cloud and Network Engineer</p>
-        <img src="media/ds-white.jpg" alt="Your Photo" class="profile-photo">
-        <nav>
-            <ul>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#certifications" class="nav-link">Certifications</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-            </ul>
-        </nav>
-        <div id="visitor-counter">Visitors: <span id="count">Loading...</span></div>
-    </header>
-    <main>
-        <section id="about">
-            <div class="about-content">
-                <h2>About Me</h2>
-                <div class="about-description">
-                    <p>Hey there! I'm Dhruv Mehul Shah, a tech enthusiast and Network Engineer with a knack for solving complex problems and a passion for cloud technologies. Based in Dallas, TX, I bring a unique blend of technical prowess and creative problem-solving to the world of network and cloud engineering.</p>
-                    <p>I hold a Master's degree in Network Engineering from Southern Methodist University, where I dove deep into the realms of Advanced Cloud Engineering, Routing & Switching, and DevOps. Before that, I earned my Bachelor's in Electronics & Telecommunication Engineering from the University of Mumbai, setting the stage for my tech journey.</p>
-                    <p>Certifications? I've got a few under my belt, including AWS Certified Solutions Architect Associate, Microsoft Certified Azure Administrator, and HashiCorp Certified Terraform Associate. These credentials showcase my commitment to staying at the cutting edge of technology.</p>
-                    <p>In my professional adventures, I've worn many hats. At GSK Solutions Inc., I'm currently honing my skills as a DevOps Engineer Intern, building and deploying cloud infrastructure with tools like Terraform and Ansible. During my time as a Teaching Assistant at SMU, I had the joy of guiding students through the intricacies of network protocols, earning a stellar 4.8/5 rating. My role as a Network and Hardware Customer Support specialist at SMU’s OIT department further polished my technical and interpersonal skills.</p>
-                    <p>My projects are where my passion truly shines. I've built a dynamic serverless resume website on AWS, showcasing my automation skills and love for innovation. I’ve also implemented robust monitoring solutions with Prometheus and Grafana, slashing overhead by 30%. One of my favorite projects was designing a CI/CD pipeline that doubled release frequency and halved manual interventions.</p>
-                    <p>When I'm not deep in code or deploying infrastructure, you might find me tinkering with new tech, scripting in Python, or exploring the endless possibilities of Docker and Kubernetes. I’m constantly driven by the challenge of making systems more efficient and reliable.</p>
-                    <p>And when I'm not geeking out over tech? You'll find me in full-on sports mode – cricket, soccer, video games, and exploring scenic hikes. Because life's about finding inspiration in every beat.</p>
-                    <p>Ready to connect? Check out my <a href="https://www.linkedin.com/in/dhruv-shah-9b145418b/" class="social-word-link"><strong>LinkedIn</strong></a> for professional insights. Visit my <a href="https://github.com/DhruvS0" class="social-word-link"><strong>GitHub</strong></a> to dive into my projects.</p>
-                    <p>Let’s create something amazing together!</p>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">DMS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item"></li>
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item"></li>
+                        <a class="nav-link" href="#certifications">Certifications</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience">Experiences</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#education">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+           <!--     <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li> -->
+                    <li class="nav-item"></li>
+                        <a class="nav-link" href="#resume">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <button id="theme-toggle" class="btn btn-sm btn-outline-primary rounded-circle">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h1 class="display-4 mb-4">Hi, I'm <span class="highlight">Dhruv Shah</span></h1>
+                    <h2 class="h3 mb-4">Network & Cloud Engineer</h2>
+                    <p class="lead mb-5">Network and Cloud Engineer with a passion for emerging technologies and a track record of optimizing complex systems. Skilled in cloud computing, DevOps, and network infrastructure, dedicated to delivering innovative solutions and exceptional technical support.</p>
+                    <div id="visitor-counter">Visitors: <span id="count">Loading...</span></div>
+                    <a href="mailto:dhruvshah.dms@gmail.com" class="btn btn-custom">Get In Touch</a>
+                    <div class="mt-4">
+                        <a href="https://www.linkedin.com/in/dhruv-shah-9b145418b/" class="me-3"><i class="fab fa-linkedin fa-2x"></i></a>
+                        <a href="https://github.com/DhruvS0" class="me-3"><i class="fab fa-github fa-2x"></i></a>
+                        <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4 text-center">
+                    <img src="media/dhruvshah.png" alt="Dhruv Shah" class="profile-image">
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="certifications">
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">About Me</h2>
+            <div class="row align-items-center">
+                <div class="col-md-4 mb-4 mb-md-0">
+                    <img src="media/dhruvshah.png" alt="Dhruv Mehul Shah" class="profile-image img-fluid">
+                </div>
+                <div class="col-md-8">
+                    <p>Hi, I'm Dhruv Mehul Shah, a Network and Cloud Engineer specializing in AWS, Azure, and DevOps practices. With a strong background in both electronics and network engineering, I bridge the gap between hardware and software to deliver holistic solutions.</p>
+                    <p>My expertise lies in:</p>
+                    <ul>
+                        <li>Designing and implementing scalable network solutions</li>
+                        <li>Cloud infrastructure optimization and automation</li>
+                        <li>DevOps practices and CI/CD pipeline implementation</li>
+                        <li>Troubleshooting complex systems</li>
+                    </ul>
+                    <p>I'm driven by a curiosity for emerging technologies and a commitment to continuous learning. My life motto, "I am a student of life, forever learning, forever growing," reflects my dedication to personal and professional development. This philosophy, combined with my technical expertise and problem-solving mindset, enables me to consistently improve efficiency and reliability in every project I undertake.</p>
+                    <p>Currently, I'm seeking opportunities to leverage my skills in cloud computing and network infrastructure to drive innovation and optimize complex systems for forward-thinking organizations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="skills" class="skills-section py-5">
+        <div class="container">
+            <h2 class="mb-4">Skills</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Cloud & Infrastructure</h3>
+                    <div class="skills-group">
+                        <span class="skill-tag"><i class="fab fa-aws"></i> AWS</span>
+                        <span class="skill-tag"><i class="fab fa-microsoft"></i> Azure</span>
+                        <span class="skill-tag"><i class="fab fa-docker"></i> Docker</span>
+                        <span class="skill-tag"><i class="fab fa-kubernetes"></i> Kubernetes</span>
+                        <span class="skill-tag"><i class="fas fa-cube"></i> Terraform</span>
+                        <span class="skill-tag"><i class="fab fa-linux"></i> Linux</span>
+                        <span class="skill-tag"><i class="fab fa-windows"></i> Windows</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Networking</h3>
+                    <div class="skills-group">
+                        <span class="skill-tag"><i class="fas fa-network-wired"></i> TCP/IP</span>
+                        <span class="skill-tag"><i class="fas fa-server"></i> DHCP/DNS</span>
+                        <span class="skill-tag"><i class="fas fa-project-diagram"></i> Subnetting</span>
+                        <span class="skill-tag"><i class="fas fa-network-wired"></i> VLAN</span>
+                        <span class="skill-tag"><i class="fas fa-route"></i> OSPF/BGP</span>
+                        <span class="skill-tag"><i class="fas fa-wifi"></i> Wireshark</span>
+                        <span class="skill-tag"><i class="fas fa-network-wired"></i> GNS3</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>DevOps & Automation</h3>
+                    <div class="skills-group">
+                        <span class="skill-tag"><i class="fab fa-git"></i> Git</span>
+                        <span class="skill-tag"><i class="fab fa-jenkins"></i> CI/CD</span>
+                        <span class="skill-tag"><i class="fab fa-ansible"></i> Ansible</span>
+                        <span class="skill-tag"><i class="fas fa-chart-line"></i> Prometheus</span>
+                        <span class="skill-tag"><i class="fas fa-chart-bar"></i> Grafana</span>
+                        <span class="skill-tag"><i class="fab fa-python"></i> Python</span>
+                        <span class="skill-tag"><i class="fas fa-terminal"></i> Bash scripting</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications" class="py-5">
+        <div class="container">
             <h2>Certifications</h2>
-            <ul class="certification-list">
+            <ul class="certifications-grid">
+                <li class="certification-logo">
+                    <img src="media/certifications/aws-ccp.png" alt="AWS Certified Cloud Practitioner">
+                </li>
+                <li class="certification-logo">
+                    <img src="media/certifications/aws-saa.png" alt="AWS Certified Solutions Architect" loading="lazy">
+                </li>
+                <li class="certification-logo">
+                    <img src="media/certifications/microsoft-caf.png" alt="Microsoft Certified Azure Fundamentals" loading="lazy">
+                </li>
+                <li class="certification-logo">
+                    <img src="media/certifications/microsoft-aa.png" alt="Microsoft Certified Azure Administrator" loading="lazy">
+                </li>
+                <li class="certification-logo">
+                    <img src="media/certifications/Essentials-Linux.png" alt="LPI Certified Linux Essentials" loading="lazy">
+                </li>
+                <li class="certification-logo">
+                    <img src="media/certifications/hashicorp-cta.png" alt="HashiCorp Certified Terarform Associate" loading="lazy">
+                </li>
+                <li class="certification-logo">
+                    <img src="media/certifications/oracle-foundation-reduced.png" alt="Oracle Certified OCI:Foundation" loading="lazy">
+                </li>
+                <li class="certification-logo">
+                    <img src="media/certifications/oracle-architect-reduced.png" alt="Oracle Certified OCI:Architect" loading="lazy">
+                </li>
+                <li class="certification-logo">
+                    <img src="media/certifications/cka.png" alt="CKA" loading="lazy">
+                </li>
+
                 
-                <li><img src="media/aws-ccp.png" alt="AWS Certification Badge" class="certification-badge"></li>
-                <li><img src="media/aws-saa.png" alt="AWS Certification Badge" class="certification-badge"></li>
-                <li><img src="media/hashicorp-cta.png" alt="HashiCorp Certification Badge" class="certification-badge"></li>
-                <li><img src="media/microsoft-caf.png" alt="Azure Certification Badge" class="certification-badge"></li>
-                <li><img src="media/microsoft-aa.png" alt="AzureCertification Badge" class="certification-badge"></li>
-                <li><img src="media/oracle-foundation-reduced.png" alt="Azure Certification Badge" class="certification-badge"></li>
-                <li><img src="media/oracle-architect-reduced.png" alt="Azure Certification Badge" class="certification-badge"></li>
-                <li><img src="media/Essentials-Linux-reduced.png" alt="Linux Certification Badge" class="certification-badge"></li>
-                <li><img src="media/ccna_600.png" alt="CKA Certification Badge" class="certification-badge"></li>
-                <li><img src="media/cka.png" alt="CKA Certification Badge" class="certification-badge"></li>
+                <!-- Add more certification logos as needed -->
             </ul>
-        </section>
+        </div>
+    </section>
 
-        <section id="skills">
-            <h2>Skills</h2>
-            <h3>Cloud/DevOps</h3>
-            <ul>
-                <li>AWS</li>
-                <li>Azure</li>
-                <li>Oracle</li>
-                <li>Docker</li>
-                <li>Kubernetes</li>
-                <li>Ansible</li>
-                <li>Git</li>
-                <li>Terraform</li>
-                <li>CI/CD Jenkins</li>
-                <li>Prometheus</li>
-                <li>Grafana</li>
-            </ul>
-            <h3>Network Concepts</h3>
-            <ul>
-                <li>TCP/IP</li>
-                <li>DHCP</li>
-                <li>DNS</li>
-                <li>ARP</li>
-                <li>ICMP</li>
-                <li>IPv4/6</li>
-                <li>Subnetting</li>
-                <li>VLAN</li>
-                <li>STP</li>
-                <li>NAT</li>
-                <li>SSH</li>
-                <li>OSPF</li>
-                <li>BGP</li>
-            </ul>
-            <h3>Software Tools and OS</h3>
-            <ul>
-                <li>Wireshark</li>
-                <li>Putty</li>
-                <li>GNS3</li>
-                <li>Eve-ng</li>
-                <li>VMWare</li>
-                <li>VirtualBox</li>
-                <li>LucidChart</li>
-                <li>Jira</li>
-                <li>OS [Windows, Linux]</li>
-            </ul>
-            <h3>Programming Languages</h3>
-            <ul>
-                <li>Python</li>
-                <li>YAML</li>
-                <li>Bash scripting</li>
-            </ul>
-        </section>
+    
+    <section id="experience" class="py-5">
+        <div class="container">
+            <h2 class="mb-4">Professional Experience</h2>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="experience-item mb-4">
+                        <h3>Network Engineer</h3>
+                        <p class="text-muted">Arrowtek Technologies LLC | July 2024 - Present</p>
+                        <ul>
+                            <li>Configured and managed critical network services including DNS, DHCP, VPN, and VLANs, while implementing robust security measures to ensure data integrity and system reliability.</li>
+                            <li>Developed and deployed scalable DevOps solutions using Ansible and Terraform, automating infrastructure deployment and management across both on-premises and cloud environments.</li>
+                            <li>Conducted performance monitoring, capacity planning, and system upgrades, leveraging both traditional network tools and cloud-native services to optimize resource utilization and maintain high availability.</li>
+                        </ul>
+                    </div>
+                    <div class="experience-item mb-4">
+                        <h3>DevOps Engineer Intern</h3>
+                        <p class="text-muted">GSK Solutions Inc. | September 2023 - June 2024</p>
+                        <ul>
+                            <li>Developed and optimized CI/CD pipelines using Git and GitHub Actions, automating testing and deployment processes to accelerate software delivery.</li>
+                            <li>Implemented Infrastructure as Code (IaC) with Terraform and Ansible, automating cloud infrastructure provisioning and configuration for enhanced scalability and operational efficiency.</li>
+                            <li>Established proactive monitoring solutions using Prometheus and Grafana, improving system reliability by identifying and resolving performance bottlenecks preemptively.</li>
+                            <li>Managed AWS resources including EC2 instances, S3 buckets, RDS databases, and Security Groups, ensuring optimal performance and adherence to security best practices.</li>
+                            <li>Created comprehensive technical documentation and runbooks for DevOps processes, infrastructure configurations, and troubleshooting procedures, facilitating knowledge sharing and streamlining onboarding for new team members.</li>
+                        </ul>
+                    </div>
+                    <div class="experience-item">
+                        <h3>Teaching Assistant</h3>
+                        <p class="text-muted">Southern Methodist University | January 2022 - May 2023</p>
+                        <ul>
+                            <li>Collaborated with the instructor to design course content, review assignments, and develop exam materials for "Introduction to Networks and Network Protocols".</li>
+                            <li>Facilitated learning for approximately 20 students, providing support with coursework and technical guidance, particularly in Linux and network protocols.</li>
+                            <li>Maintained an exceptional average rating of 4.8/5 in student evaluations, demonstrating strong communication skills and the ability to effectively convey complex topics.</li>
+                        </ul>
+                    </div>
+                    <div class="experience-item">
+                        <h3>Network and Hardware Customer Support</h3>
+                        <p class="text-muted">Southern Methodist University | May 2022 - December 2022</p>
+                        <ul>
+                            <li>Delivered exceptional support to 8-10 customers daily, diagnosing and resolving network, hardware, and software issues, achieving an 85% first-call resolution rate.</li>
+                            <li>Utilized I-Support incident management tools to efficiently track and resolve customer issues, ensuring high levels of customer satisfaction and adherence to timelines.</li>
+                            <li>Installed, configured, and maintained various hardware devices, including monitors, printers, and wireless devices, enhancing the overall productivity and user experience.</li>
+                            <li>Diagnosed and resolved issues related to network connectivity and software, significantly reducing support tickets.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        <section id="projects">
-            <h2>Projects</h2>
-            <div class="project">
-                <h3>
-                    <a href="https://github.com/DhruvS0/CloudOps-Week-1-Host-a-static-website-on-AWS" target="_blank" rel="noopener noreferrer">
-                        CloudOps - Host a static website on AWS
-                    </a>
-                </h3>
-                <p>In this project, I demonstrate how to leverage Amazon Web Services (AWS) to host a static website efficiently. Using AWS services such as Amazon S3 for storage, AWS Route 53 for DNS management, and Amazon CloudFront for content delivery, I showcase the process of deploying and managing a static website on the cloud. This project delves into the fundamentals of cloud operations, highlighting best practices for hosting and optimizing static web content on AWS infrastructure.</p>
-                <p><strong>Technologies used:</strong> AWS S3, Route 53, CloudFront, AWS CodePipeline, AWS Certificate Manager</p>
+    <!-- Education Section -->
+    <section id="education" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Education</h2>
+            <div class="education-item">
+                <h3>Southern Methodist University</h3>
+                <p>Master of Science in Network Engineering</p>
+                <p class="text-muted">Graduation Date: May 2023</p>
             </div>
-            <!-- Add more projects as needed -->
-            <div class="project">
-                <h3>
-                    <a href="https://github.com/DhruvS0/CloudOps-Week-3-Terraform" target="_blank" rel="noopener noreferrer">
-                            CloudOps - Terraform Infrastructure as Code
-                    </a>
-                </h3>
-                <p>This project focuses on Infrastructure as Code (IaC) using Terraform, a powerful tool for managing infrastructure declaratively. I demonstrate the automation of cloud infrastructure provisioning and management on Amazon Web Services (AWS) using Terraform's configuration files. Through this project, I emphasize the benefits of IaC in maintaining consistency, scalability, and efficiency in cloud environments.</p>
-                <p><strong>Technologies used:</strong> Terraform, AWS (EC2, VPC, IAM, S3), GitHub Actions, Shell scripting</p>
+            <div class="education-item">
+                <h3>University of Mumbai</h3>
+                <p>Bachelor of Engineering in Electronics and Telecommunication Engineering</p>
+                <p class="text-muted">Graduation Date: November 2020</p>
             </div>
-            
-            <div class="project">
-                <h3>
-                    <a href="https://github.com/DhruvS0/CloudOps-Week5-Alerting-Monitoring-K8s" target="_blank" rel="noopener noreferrer">
-                            CloudOps - Alerting and Monitoring in Kubernetes
-                    </a>
-                </h3>
-                <p>This project focuses on implementing alerting and monitoring solutions within Kubernetes clusters. Leveraging tools like Prometheus for metrics collection and Grafana for visualization, I showcase the setup of monitoring dashboards and alerting rules to ensure high availability and performance of Kubernetes applications. This project delves into the crucial aspect of observability in containerized environments, emphasizing proactive management and troubleshooting.</p>
-                <p><strong>Technologies used:</strong> AWS (IAM, EC2, EKS), Kubernetes, Prometheus, Grafana, AlertManager, Kubernetes Operators, Helm</p>
+        </div>
+    </section>
+
+    <section id="projects" class="py-5">
+        <div class="container">
+            <h2 class="mb-4">Featured Projects</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="project-card">
+                        <h3>Cloud-Hosted Resume Website</h3>
+                        <p>Developed a cloud-hosted resume website using AWS services. Utilized S3 for static website hosting, Route 53 for domain management, and CloudFront for content delivery. Integrated a visitor counter using Lambda, DynamoDB, and API Gateway to track visits. Implemented CI/CD with GitHub Actions to automate updates and deployments, ensuring a modern, scalable, and efficient web presence.</p>
+                        <div class="mb-3">
+                            <span class="skill-tag">AWS</span>
+                            <span class="skill-tag">S3</span>
+                            <span class="skill-tag">Lambda</span>
+                            <span class="skill-tag">Route53</span>   
+                            <span class="skill-tag">API Gateway</span> 
+                            <span class="skill-tag">GitHub Actions</span>      
+                            <span class="skill-tag">DynamoDB</span>          
+                            <span class="skill-tag">HTML/CSS</span>       
+                            <span class="skill-tag">Javascript</span>   
+                            <span class="skill-tag">Python</span> 
+                        </div>
+                        <a href="https://github.com/DhruvS0/Cloud-Resume-DS" class="btn btn-custom btn-sm">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="project-card">
+                        <h3>CI/CD Pipeline with ArgoCD and CircleCI</h3>
+                        <p>Implemented a CI/CD pipeline using ArgoCD and CircleCI to automate application deployments to a Kubernetes cluster. ArgoCD handled continuous delivery with a GitOps approach, while CircleCI managed continuous integration, streamlining the build, test, and deployment processes.</p>
+                        <div class="mb-3">
+                            <span class="skill-tag">GitHub</span>
+                            <span class="skill-tag">ArgoCD</span>
+                            <span class="skill-tag">CircleCI</span> 
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">AWS</span>
+                            <span class="skill-tag">YAML</span> 
+                            <span class="skill-tag">Helm</span> 
+                            <span class="skill-tag">Kubernetes</span>                          
+                        </div>
+                        <a href="https://github.com/DhruvS0/CloudOps-Week4-ArgoCD-CircleCI" class="btn btn-custom btn-sm">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                    <div class="project-card">
+                        <h3>Infrastructure Automation with Terraform</h3>
+                        <p>Completed a beginner bootcamp focused on Terraform for infrastructure as code (IaC). Learned to write Terraform configurations to provision and manage cloud resources efficiently. Covered key concepts including state management, modules, and the Terraform CLI, and applied these skills to create, update, and version infrastructure safely and predictably.</p>
+                        <div class="mb-3">
+                            <span class="skill-tag">Terraform</span>
+                            <span class="skill-tag">AWS</span>
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">GitHub</span>
+                            <span class="skill-tag">HCL</span>                            
+                        </div>
+                        <a href="https://github.com/DhruvS0/terraform-beginner-bootcamp-2023" class="btn btn-custom btn-sm">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="project-card">
+                        <h3>Kubernetes Monitoring with Prometheus and Grafana</h3>
+                        <p>Implemented a comprehensive alerting and monitoring system for Kubernetes using Prometheus and Grafana. Configured Prometheus to collect and store metrics from the Kubernetes cluster and set up Grafana dashboards for real-time visualization. Established alerting rules to promptly notify on critical issues, ensuring the reliability and performance of the Kubernetes environment.</p>
+                        <div class="mb-3">
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">Docker</span>
+                            <span class="skill-tag">AWS EKS</span>
+                            <span class="skill-tag">YAML</span>
+                            <span class="skill-tag">Helm</span>
+                            <span class="skill-tag">Prometheus</span>
+                            <span class="skill-tag">Grafana</span>
+                            <span class="skill-tag">ELK Stack</span>                            
+                        </div>
+                        <a href="https://github.com/DhruvS0/CloudOps-Week5-Alerting-Monitoring-K8s" class="btn btn-custom btn-sm">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="project-card">
+                        <h3>Configuration Management with Ansible</h3>
+                        <p>Developed and deployed automation scripts using Ansible to manage and configure server infrastructure. The project included creating playbooks for software installation, system updates, and configuration tasks, ensuring consistent and repeatable setups across multiple environments. This hands-on experience enhanced skills in automating IT workflows and managing configurations efficiently.</p>
+                        <div class="mb-3">
+                            <span class="skill-tag">Ansible</span>
+                            <span class="skill-tag">SSH</span>
+                            <span class="skill-tag">Linux</span>
+                            <span class="skill-tag">Git</span>
+                        </div>
+                        <a href="https://github.com/DhruvS0/AnsibleLab" class="btn btn-custom btn-sm">Learn More</a>
+                    </div>
+                </div>
             </div>
-            
-            <div class="project">
-                <h3>
-                    <a href="https://github.com/DhruvS0/CloudOps-Week4-ArgoCD-CircleCI" target="_blank" rel="noopener noreferrer">
-                            CloudOps - ArgoCD and CircleCI Integration
-                    </a>
-                </h3>
-                <p>This project focuses on integrating ArgoCD, a continuous delivery tool for Kubernetes, with CircleCI, a popular continuous integration and delivery platform. By automating the deployment process and ensuring version control, I demonstrate how to streamline Kubernetes application deployments using GitOps principles. This project emphasizes the importance of automated pipelines and declarative application management in modern cloud-native environments.</p>
-                <p><strong>Technologies used:</strong> AWS, ArgoCD, CircleCI, Kubernetes, GitOps, Helm, GitHub</p>
+        </div>
+    </section>
+<!-- 
+    <section id="contact" class="py-5">
+        <div class="container text-center">
+            <h2 class="mb-4">Get In Touch</h2>
+            <p class="mb-4">I'm always open to new opportunities and collaborations. Feel free to reach out!</p>
+            <a href="mailto:dhruv.shah@example.com" class="btn btn-custom">Say Hello</a>
+            <div class="mt-4">
+                <a href="https://www.linkedin.com/in/dhruv-shah-9b145418b/" class="me-3"><i class="fab fa-linkedin fa-2x"></i></a>
+                <a href="https://github.com/DhruvS0" class="me-3"><i class="fab fa-github fa-2x"></i></a>
+                <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
             </div>
-            
-            <div class="project">
-                <h3>
-                    <a href="https://github.com/DhruvS0/terraform-beginner-bootcamp-2023" target="_blank" rel="noopener noreferrer">
-                            Terraform Beginner Bootcamp 2023
-                    </a>
-                </h3>
-                <p>Terraform Beginner Bootcamp 2023 was an immersive journey where I delved into a multitude of technologies and practices, honing my skills in Terraform Cloud fundamentals for efficient project management. This experience was complemented by hands-on learning in key GitHub operations, empowering me with robust version control strategies and collaboration techniques. A significant highlight was my practical application of AWS S3 and CDN hosting, allowing me to showcase expertise in scalable web page deployment. Moreover, exploring the Sinatra web framework added a dynamic aspect to my learning, culminating in the creation of dynamic web pages hosted on Terratowns cloud infrastructure. These experiences solidified my understanding of Infrastructure as Code (IaC) principles and reinforced the importance of version control, collaboration, and cloud deployment strategies in modern development environments.</p>
-                <p><strong>Technologies used:</strong> Terraform, AWS, Shell Scripting, Git, Troubleshooting, Technical Documentation, Sintara Web Framework, GitHub</p>
+        </div>
+    </section>
+-->
+
+    <section id="resume" class="py-5"></section>
+        <div class="container">
+            <div class="resume-download text-center">
+                <h2 class="mb-4">Download My Resume</h2>
+                <p>Get a detailed overview of my skills, experience, and qualifications.</p>
+                <a href="path/to/your/resume.pdf" class="btn btn-custom" download>Download Resume</a>
             </div>
-        </section>
-    </main>
-    <footer>
-        <ul>
-            <li><a href="#about" class="nav-link">About</a></li>
-            <li><a href="#certifications" class="nav-link">Certifications</a></li>
-            <li><a href="#skills" class="nav-link">Skills</a></li>
-            <li><a href="#projects" class="nav-link">Projects</a></li>
-        </ul>
-        <p>&copy; 2024 Dhruv Mehul Shah. All rights reserved.</p>
+        </div>
+    </section>
+
+    <footer class="py-4 text-center">
+        <div class="container">
+            <p>&copy; 2024 Dhruv Shah. All rights reserved.</p>
+        </div>
     </footer>
     <script>
         // Replace this with your actual API Gateway URL output from Terraform
@@ -193,9 +394,10 @@
         // Fetch the visitor count when the page loads
         window.onload = fetchVisitorCount;
     </script>  
-    <button id="theme-toggle" class="toggle-button">Toggle Theme</button>
+    
 
     <script>
+        document.addEventListener('DOMContentLoaded', function() {
         const toggleButton = document.getElementById('theme-toggle');
         toggleButton.addEventListener('click', () => {
             document.body.classList.toggle('dark-mode');
@@ -205,6 +407,10 @@
                 section.classList.toggle('dark-mode');
             });
         });
+        });
     </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="theme-toggle.js"></script>
 </body>
 </html>
