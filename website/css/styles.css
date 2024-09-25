@@ -262,6 +262,22 @@ h2 {
     object-fit: contain;
 }
 
+/* About section styles */
+#about .about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+#about ul {
+    padding-left: 20px;
+    margin-bottom: 1rem;
+}
+
+#about ul li {
+    margin-bottom: 0.5rem;
+}
+
 /* Theme toggle button styles */
 
 .theme-transition {
