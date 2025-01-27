@@ -38,7 +38,7 @@ jobs:
 
       # Step 5: Sync website files to S3
       - name: Sync website to S3
-        uses: jakejarvis/s3-sync-action@v1
+        uses: jakejarvis/s3-sync-action@master
         with:
           args: --follow-symlinks --delete --exclude '.git/*' --size-only
         env:
