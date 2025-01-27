@@ -3,14 +3,14 @@ import os
 import sys
 import json
 import boto3
-from moto import mock_aws  # Updated import
+from moto import mock_aws
 
 # Add the lambda directory to the Python path
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../infra/lambda')))
 
 from lambda_function import lambda_handler
 
-@mock_aws  # Updated decorator
+@mock_aws
 def test_lambda_handler_success():
     # Set up environment variable for DynamoDB table name
     os.environ['DYNAMODB_TABLE'] = 'VisitorsTable'

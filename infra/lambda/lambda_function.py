@@ -1,8 +1,10 @@
+# lambda/lambda_function.py
 import json
 import boto3
 from botocore.exceptions import ClientError
 
-dynamodb = boto3.resource('dynamodb')
+# Specify the AWS region explicitly
+dynamodb = boto3.resource('dynamodb', region_name='us-east-1')
 table = dynamodb.Table('VisitorsTable')
 
 def lambda_handler(event, context):

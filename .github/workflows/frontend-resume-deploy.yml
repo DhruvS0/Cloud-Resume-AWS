@@ -34,6 +34,7 @@ jobs:
         run: |
           python -m pytest tests/
         env:
+          AWS_DEFAULT_REGION: "us-east-1"  # Set the AWS region
           DYNAMODB_TABLE: "VisitorsTable"  # Use a mock table name for testing
 
       # Step 5: Sync website files to S3
