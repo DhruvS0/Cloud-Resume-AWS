@@ -12,6 +12,13 @@ from lambda_function import lambda_handler
 
 @mock_aws
 def test_lambda_handler_success():
+    # Mock AWS credentials
+    os.environ['AWS_ACCESS_KEY_ID'] = 'testing'
+    os.environ['AWS_SECRET_ACCESS_KEY'] = 'testing'
+    os.environ['AWS_SECURITY_TOKEN'] = 'testing'
+    os.environ['AWS_SESSION_TOKEN'] = 'testing'
+    os.environ['AWS_DEFAULT_REGION'] = 'us-east-1'
+
     # Set up environment variable for DynamoDB table name
     os.environ['DYNAMODB_TABLE'] = 'VisitorsTable'
 
@@ -38,6 +45,13 @@ def test_lambda_handler_success():
 
 @mock_aws
 def test_lambda_handler_error():
+    # Mock AWS credentials
+    os.environ['AWS_ACCESS_KEY_ID'] = 'testing'
+    os.environ['AWS_SECRET_ACCESS_KEY'] = 'testing'
+    os.environ['AWS_SECURITY_TOKEN'] = 'testing'
+    os.environ['AWS_SESSION_TOKEN'] = 'testing'
+    os.environ['AWS_DEFAULT_REGION'] = 'us-east-1'
+
     # Set up environment variable for DynamoDB table name
     os.environ['DYNAMODB_TABLE'] = 'VisitorsTable'
 
